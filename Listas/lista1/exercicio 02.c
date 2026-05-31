@@ -24,9 +24,13 @@
         printf("quantos gols o time 2 fez?");
         scanf("%d", &p.gols2);
         
-        if (gols1 > gols2) {
-            printf("time 1 venceu")
+        if (p.gols1 > p.gols2) {
+            printf("time 1 venceu");
+        }
+    else if (p.gols1 == p.gols2) {
+        printf("o jogo empatou");
     }
-    
-    
-  
+     else {
+         printf("time 2 venceu");
+    }
+    }
