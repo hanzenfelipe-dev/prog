@@ -1,42 +1,61 @@
 #include <stdio.h>
-/* professor esse tava muito dicil eu tive que usar um pouco de IA que 
-tava muito hard mas consegui fazer grande parte*/
+#include <string.h>
+
+/* professor esse tava muito dificil eu tive que usar um pouco de IA
+mas consegui fazer grande parte */
+
 int main() {
     int n;
-    scanf("%d", &n);
 
-    char nome[50];
+    printf("=== SISTEMA DE ESTOQUE ===\n");
+     printf("Digite a quantidade de produtos: ");
+      scanf("%d", &n);
+
+      char nome[50];
      float preco;
-      int quantidade;
+    int quantidade;
 
-    float valor;
-     float total = 0;
-      float maior_valor = 0;
-       char produto_maior[50];
+     float valor;
+      float total = 0;
+       float maior_valor = 0;
+        char produto_maior[50];
 
-    printf("produto valor em estoque\n");
-    printf("--------------------------------\n");
+    printf("\nAgora digite os dados dos produtos:\n");
+     printf("(nome, preco, quantidade)\n\n");
+
+      printf("=====================================\n");
+       printf("PRODUTO        VALOR EM ESTOQUE\n");
+      printf("=====================================\n");
 
     for (int i = 0; i < n; i++) {
-        scanf("%s", nome);
-        scanf("%f", &preco);
-        scanf("%d", &quantidade);
+
+        printf("\nProduto %d\n", i + 1);
+
+        printf("Nome: ");
+         scanf("%49s", nome);
+
+        printf("Preco: ");
+         scanf("%f", &preco);
+
+        printf("Quantidade: ");
+         scanf("%d", &quantidade);
 
         valor = preco * quantidade;
 
-        printf("%-15s %.2f\n", nome, valor);
+        printf("-> Valor em estoque: %.2f\n", valor);
 
         total += valor;
 
         if (i == 0 || valor > maior_valor) {
             maior_valor = valor;
-            sprintf(produto_maior, "%s", nome);
+            strcpy(produto_maior, nome);
         }
     }
 
-    printf("--------------------------------\n");
-    printf("total geral: %.2f\n", total);
-    printf("produto com maior valor: %s\n", produto_maior);
+    printf("\n=====================================\n");
+     printf("TOTAL GERAL DO ESTOQUE: %.2f\n", total);
+      printf("PRODUTO COM MAIOR VALOR: %s\n", produto_maior);
+       printf("=====================================\n");
 
     return 0;
 }
