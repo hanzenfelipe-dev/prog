@@ -20,9 +20,6 @@ int main() {
        float maior_valor = 0;
         char produto_maior[50];
 
-    printf("\nAgora digite os dados dos produtos:\n");
-     printf("(nome, preco, quantidade)\n\n");
-
       printf("=====================================\n");
        printf("PRODUTO        VALOR EM ESTOQUE\n");
       printf("=====================================\n");
