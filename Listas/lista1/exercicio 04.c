@@ -4,23 +4,23 @@ porque tava muito feio mas a logica acho que tava certa*/
 
 int main() {
     int n, i;
-    char nome[50];
-    float nota, soma = 0, media;
-    int aprovados = 0;
+     char nome[50];
+      float nota, soma = 0, media;
+       int aprovados = 0;
 
     printf("\nquantidade de alunos: ");
     
-    scanf("%d", &n);
+     scanf("%d", &n);
 
     for(i = 0; i < n; i++) {
 
         printf("\n--- aluno %d ---\n", i + 1);
 
-    printf("Nome: ");
-         scanf("%s", nome);
+     printf("Nome: ");
+          scanf("%s", nome);
 
-      printf("Nota: ");
-        scanf("%f", &nota);
+       printf("Nota: ");
+          scanf("%f", &nota);
 
          soma += nota;
 
@@ -28,15 +28,15 @@ int main() {
             aprovados++;
         }
 
-        printf("aluno: %s | Nota: %.2f\n", nome, nota);
+           printf("aluno: %s | Nota: %.2f\n", nome, nota);
        }
 
     media = soma / n;
 
       printf("\n====================\n");
    printf("media da turma: %.2f\n", media);
-    printf("Aprovados: %d\n", aprovados);
-    printf("====================\n");
+   printf("Aprovados: %d\n", aprovados);
+      printf("====================\n");
 
     return 0;
 }
